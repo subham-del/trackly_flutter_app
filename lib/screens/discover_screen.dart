@@ -86,7 +86,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
     return RefreshIndicator( onRefresh: refresh,child: ListView.builder(controller: controller, itemCount: users.length + 1, itemBuilder: (context, index){
       if(index < users.length){
         final user = users[index];
-        return UserProfileCard(userName: user.username!, onRequestSent: () async{
+        return UserProfileCard(userId: user.userId!,userName: user.username!, onRequestSent: () async{
           final userId = await TokenStorage.getUserId();
           final response = await authHttp.post(
             '/api/users/friend-request',

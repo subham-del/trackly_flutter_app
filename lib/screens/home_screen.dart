@@ -28,7 +28,9 @@ class _HomeScreenState extends State<homeScreen> {
 
     // TODO: implement build
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         actions: [
           GestureDetector(
@@ -55,12 +57,13 @@ class _HomeScreenState extends State<homeScreen> {
         data: NavigationBarThemeData(
           indicatorColor: Colors.blue.shade100,
           labelTextStyle: MaterialStateProperty.all(
-            TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+            TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
           ),
         ),
         child: NavigationBar(
           height: 60,
-          backgroundColor: Color(0xFFf1f5fb),
+          backgroundColor: Colors.transparent,
+          labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
           selectedIndex: _currentIndex,
           onDestinationSelected:
               (_currentIndex) => setState(() {

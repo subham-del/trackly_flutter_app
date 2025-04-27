@@ -11,8 +11,9 @@ class FriendCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
+      color: Colors.white,
+      elevation: 0,
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(
@@ -29,7 +30,8 @@ class FriendCard extends StatelessWidget {
                 print('Track ${friend.friendName}');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                elevation: 0,
+
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
