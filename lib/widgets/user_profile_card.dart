@@ -35,7 +35,7 @@ class UserProfileCard extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             elevation: 0,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12), // <-- set radius here
+              borderRadius: BorderRadius.circular(30), // <-- set radius here
             ),
           ),
           onPressed: onRequestSent,
